@@ -40,7 +40,10 @@ export default function Edit({attributes, setAttributes}) {
 	const handleTimer = e => {
 
 		// for now just switches timer with useEffect
-		const timerAction = e.target.className.includes('start-timer') ? 'start' : e.target.className.includes('pause-timer') ? 'pause' : e.target.className.includes('record-timer') ? 'record' : null
+		const timerAction = 
+			e.target.className.includes('start-timer') ? 'start' : 
+			e.target.className.includes('pause-timer') ? 'pause' : 
+			e.target.className.includes('record-timer') ? 'record' : null // unfinished
 		setAttributes({timerAction})	// sets local variable to attributes
 		console.log('timerAction: ', attributes.timerAction, 'From attributes.')	
 		// watch for timerAction to change
